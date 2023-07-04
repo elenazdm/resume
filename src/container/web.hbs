@@ -1,0 +1,77 @@
+<div>
+ <main>
+    
+     
+    <em>{{> title data="WEB" big=true}}</em>
+    <div>
+      {{#with web}}
+       <h2>Languages</h2> 
+       {{#each languages}}
+       <ul>
+        <li><h3>{{name}}</h3></li>
+        <li>Version: {{version}}</li>
+        <li>Description: {{description}}</li>
+       <br>
+       {{#if elements}}<b><li>Elements:</b> {{/if}}
+        {{#each elements}}
+        <ul>
+          <li>
+            <strong>{{name}}</strong> <br>
+            {{description}} <br>
+            Attributes: {{#each attributes}}
+            <ul><li>{{name}} - {{description}} </li></ul>
+            {{/each}}
+          </li>
+           </ul>
+        <br>
+       
+        {{/each}}
+         {{#if properties}}<li><b>Properties:</b></li>
+          {{#each properties}}
+          <ul>
+            <li>
+              {{name}} , {{description}} 
+                  {{#each values}}
+                  <ul><li>{{value}}, {{description}} </li></ul>
+                  {{/each}}
+
+            </li>
+          </ul>
+          {{/each}}
+         
+         {{/if}}
+
+         
+         
+
+         {{#if functions}}<li><b>Functions:</b>
+          {{#each functions}}
+          <ul>
+            <li>
+              <h5>{{name}}</h5> <br>
+              Description: {{description}} <br>
+              Parameters:
+              {{#each parameters}}
+              Name:{{name}},<br>
+              Type:{{type}}, <br> 
+              Description: {{description}} <br>
+              {{/each}}
+            </li>
+          </ul>
+          {{/each}}
+         
+         </li> {{/if}}
+
+         </ul>
+      
+       
+       {{/each}}
+      {{/with}}
+    </div>
+    
+    
+    
+        
+  </main>
+ 
+</div>
