@@ -1,0 +1,100 @@
+<div>
+ <main>
+    
+     
+    <em>{{> title data="Program" big=true}}</em>
+    <div>
+        {{#with program}}
+        <h2>Excursion:</h2>
+          {{#with excursion}}
+            <ul>
+              <li><h5>Name:</h5>{{name}}</li>
+              <li><h5>Location:</h5>
+                <br>
+                {{#with location}}
+                <em>{{city}}, {{country}}</em> 
+                {{/with}}
+              </li>
+              <li><h5>Date:</h5>{{date}}</li>
+              <hr/>
+              <li><h3>Program:</h3>
+                <br>
+                
+                <ul>
+                  <li><em><h4>{{program.[0].name}}</h4></em> <br>
+                Type:{{program.[0].type}} <br>
+                Duration:{{program.[0].duration}} <br>
+                <hr>
+                <b>Details:</b><br>
+                  {{#with program.[0].details}} 
+                  Museum: 
+                    {{#with museum}}
+                    {{name}} <br>
+                    Location:
+                      {{#with location}}
+                      {{address}}, {{city}}, {{country}}
+                      {{/with}}
+                      <br>
+                      <br>
+                    <h5>Exhibits: </h5>
+                    {{#each exhibits}}
+                    <ul>
+                      <li>Name: {{name}}<br>
+                           {{#if artist}} Artist: {{artist}}<br>{{/if}}
+                          Description: {{description}}<br>
+                          Audio guide: {{#if audio_guide}} yes
+                          {{/if}}</li>
+                          <br>
+                    </ul>
+                    {{/each}}
+                    
+                    {{/with}}
+                  {{/with}}
+                </li>
+                <li><em><h4>{{program.[1].name}}</h4></em>
+                Name: {{name}} <br>
+                Type: {{program.[1].type}}
+                Duration: {{program.[1].duration}}
+                <hr>
+                <b>Details:</b><br>
+                {{#with program.[1].details}}
+                <h5>Venue:</h5>
+                  {{#with venue}}
+                  {{name}}, {{#with location}} {{address}}, {{city}}, {{country}} {{/with}}
+                  {{/with}}
+                <h5>Performers:</h5>
+                   {{#each performers}}
+                   <ul>
+                    <li> "{{name}}" - {{type}}</li>
+                   </ul>
+                   {{/each}}
+                <h5>Guide:</h5>
+                {{#with guide}}
+                <em>Name: {{name}} <br>
+                Language: {{language}} <br>
+                Rating: {{rating}} </em>
+                
+                {{/with}}<br>
+
+                {{/with}}
+                </li>
+                </ul>
+                <br>
+                
+
+
+
+                
+
+              </li>
+            </ul>
+          {{/with}} 
+
+       
+        {{/with}}  
+    </div>
+              
+        
+  </main>
+ 
+</div>
