@@ -1,0 +1,88 @@
+<div>
+ <main>
+    
+     
+    <em>{{> title data="JS" big=true}}</em>
+     
+    
+        <strong><b><span class="badge text-bg-success">{{name}}</span></b></strong>
+        <hr>
+       <div>
+           <div class="alert alert-primary" role="alert">
+  Description:
+</div>  {{description}} <br>
+            <div class="alert alert-primary" role="alert">
+  History:
+</div>
+             {{#with history}} 
+            {{year}}, {{founder}}
+            {{/with}}<br>
+            <div class="alert alert-primary" role="alert">  Types:</div>
+               <uL>
+              <li>{{{tools.[0]}}} </li>
+            <li> {{{tools.[1]}}} </li>
+            <li> {{{tools.[2]}}} </li>
+            <li> {{{tools.[3]}}} </li>
+            <li> {{{tools.[4]}}} </li>
+            <li> {{{tools.[5]}}} </li>
+            <li> {{{tools.[6]}}} </li>
+            <li> {{{tools.[7]}}} </li>
+             </uL>
+            <div class="alert alert-primary" role="alert">  Syntax:</div> {{#with syntax}}
+            <ul>
+            <li>Variables: {{{variables}}}</li>
+            <li>Functions: {{{functions}}}</li>
+            <li>Conditionals: {{{conditionals}}}</li>
+            <li>Loops: {{{loops}}}</li>
+            <li>Classes: {{{classes}}}</li>
+             </ul>
+             <br>
+            {{/with}} <br>
+              <div class="alert alert-primary" role="alert">Features </div>
+            <uL>
+              <li>{{{features.[0]}}} </li>
+
+            <li> {{{features.[1]}}} </li>
+            <li> {{{features.[2]}}} </li>
+            <li> {{{features.[3]}}} </li>
+            <li> {{{features.[4]}}} </li>
+            <li> {{{features.[5]}}} </li>
+                        </uL>
+             <br>
+            <div class="alert alert-primary" role="alert">Libraries </div>
+               <uL>
+              <li>{{{libraries.[0]}}} </li>
+            <li> {{{libraries.[1]}}} </li>
+            <li> {{{libraries.[2]}}} </li>
+            <li> {{{libraries.[3]}}} </li>
+            <li> {{{libraries.[4]}}} </li>
+            <li> {{{libraries.[5]}}} </li>
+            <li> {{{libraries.[6]}}} </li>
+            <li> {{{libraries.[7]}}} </li>
+             </uL>
+              <br>
+            <div class="alert alert-primary" role="alert">Tools </div>
+             <li>{{{tools.[0]}}} </li>
+            <li> {{{tools.[1]}}} </li>
+            <li> {{{tools.[2]}}} </li>
+            <li> {{{tools.[3]}}} </li>
+            <li> {{{tools.[4]}}} </li>
+            <li> {{{tools.[5]}}} </li>
+            <li> {{{tools.[6]}}} </li>
+            <li> {{{tools.[7]}}} </li>
+            <br>
+               <div class="alert alert-primary" role="alert">Community </div>
+               {{#each community}}
+              <ul><li>{{name}} {{type}}  </li></ul>
+              {{/each}}
+         
+            
+            
+            
+      </div> 
+    </div>
+    
+        
+  </main>
+ 
+</div>
