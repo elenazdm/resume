@@ -25,9 +25,29 @@
                 <li>Gender: {{gender}} </li>
                 <li>Age: {{age}}</li>
                   {{/each}} 
-          
-        </ul>
+              </ul>
         </li> 
+          {{#if groups}} <li><b>Groups:</b>
+            <ul>
+              {{#each groups}}
+              <li>ID: {{id}} </li>
+              <li>Name: {{name}} </li>
+              <li>Description: {{description}} </li>
+               <li>Members: 
+                  {{#each members}}
+                  <ul> 
+                   <li>ID: {{id}} </li>
+                  <li>Name: {{name}} </li>
+                  <li>Gender: {{gender}} </li> 
+                  <li>Age: {{age}}</li>
+                  </ul>
+                  {{/each}}</li>
+               
+              {{/each}}
+              </ul>
+              </li>
+              {{/if}}
+          
         <br>
         {{/each}}
         {{#if groups}}
