@@ -1,0 +1,63 @@
+<div>
+ <main>
+    <div class="alert alert-info" role="alert">
+  Facebook
+</div>
+     
+    <em>{{> title data="Users:" big=true}}</em>
+    <ul>
+      {{#each users}}
+      <li>ID: {{id}} </li> 
+      <li>Name: {{name}} </li> 
+      <li>Gender: {{gender}} </li> 
+      <li>Age: {{age}}</li> 
+        <li><strong>Friends:</strong> 
+        <ul> {{#each friends}} <br> 
+          <li>ID: {{id}} </li>
+          <li>Name: {{name}} </li>
+          <li>Gender: {{gender}} </li> 
+          <li>Age: {{age}}</li>
+            <li> <em>Mutual friends:</em> 
+                {{#each mutual_friends}}
+                <ul><br> 
+                <li>ID: {{id}} </li>
+                <li>Name: {{name}} </li> 
+                <li>Gender: {{gender}} </li>
+                <li>Age: {{age}}</li>
+                  {{/each}} 
+          
+        </ul>
+        </li> 
+        <br>
+        {{/each}}
+        {{#if groups}}
+        <li><strong>Groups:</strong> </li>
+         {{#each groups}}
+         <ul><br> 
+                <li>ID: {{id}} </li>
+                <li>Name: {{name}} </li> 
+                <li>Description: {{description}} </li>
+                <br>
+                <li><em>Members: </em>
+                  <ul>
+                    {{#each members}}
+                    <li>ID: {{id}} </li>
+                    <li>Name: {{name}} </li> 
+                    <li>Gender: {{gender}} </li>
+                    <li>Age: {{age}}</li> <br>
+                    {{/each}}
+                  </ul>
+                    
+                      
+                </li>
+         {{/each}}   
+         {{/if}}   
+      <br> <hr>
+     
+      {{/each}}
+    </ul>
+    
+        
+  </main>
+ 
+</div>
