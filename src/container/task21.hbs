@@ -1,0 +1,78 @@
+<div>
+  <main>
+    <div>
+      {{#with heading}}
+        {{#with main}}
+          {{title}}
+          {{text}}
+          button_text
+          {{#with button_text}}
+            solid
+            {{solid}}
+            outline
+            {{outline}}
+          {{/with}}
+        {{/with}}
+        <hr />
+        <div>
+          {{#with second}}
+            {{title}}
+            {{text}}
+            button_text
+            {{#with button_text}}
+              {{solid}}
+              {{outline}}
+            {{/with}}
+          {{/with}}
+        </div>
+        <div>
+          subblock
+          {{#with subblock}}
+            title{{title}}
+            {{text}}
+            {{#with button_text}}
+              {{solid}}
+              {{outline}}
+            {{/with}}
+          {{/with}}
+        </div>
+      {{/with}}
+    </div>
+    <div>
+      nested_display
+      {{#with nested_display}}
+        {{title}}
+        children_display
+        {{#with children_display}}
+          {{title}}
+          {{text}}
+          {{#with button}}
+            {{text}}
+          {{/with}}
+        {{/with}}
+        header_text
+        {{header_text}}
+        button
+        {{#with button}}
+          {{text}}
+        {{/with}}
+      {{/with}}
+    </div>
+    <div>
+      paragraph
+      {{#with paragraph}}
+        {{title}}
+        {{text}}
+        {{#with button}}
+          {{text}}
+          {{url}}
+        {{/with}}
+        list_name
+        {{#each list_name}}
+          {{text}}
+          {{url}}
+        {{/each}}
+      {{/with}}
+    </div>
+  </main>
+</div>
