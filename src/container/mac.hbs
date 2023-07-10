@@ -1,0 +1,122 @@
+<div>
+ <main>
+    
+     
+    <em>{{> title data="MAC" big=true}}</em>
+     
+        
+       <div>
+           <div class="alert alert-primary" role="alert">
+  Apple MacBook Pro: {{name}}, {{description}}, {{price}}, {{category}} </div>   <br>
+            <div class="alert alert-primary" role="alert"> 
+  Features:</div>
+  {{#with features}}
+  <h3>Processor:</h3>
+  <hr/>
+  {{#with processor}}
+  <ul>
+   <li>Brand: {{brand}} </li>
+   <li>Model: {{model}} </li>
+   <li>Speed: {{speed}} </li>
+   <li>Cache: {{cache}} </li>
+   <li>Cores: {{cores}} </li>
+  </ul>
+  {{/with}}
+  <h3>Memory:</h3>
+  {{#with memory}}
+  <hr/>
+  <ul>
+   <li>Type: {{type}} </li>
+   <li>Size: {{size}} </li>
+   <li>Speed: {{speed}} </li>
+    </ul>
+
+  {{/with}}
+
+   <h3>Storage:</h3>
+   <hr/>
+     {{#with storage}}
+       <ul>
+         <li>Type: {{type}} </li>
+         <li>Size: {{size}} </li>
+         <li>Speed: {{speed}} </li>
+      </ul>
+      {{/with}}
+       <h3>Display:</h3>
+   <hr/>
+     {{#with display}}
+       <ul>
+        
+         <li>Size: {{size}} </li>
+          <li>Resolution: {{resolution}} </li>
+         <li>Technology: {{technology}} </li>
+          <li>Color_space: {{color_space}} </li>
+          <li>Brightness: {{brightness}} </li>
+         <li>Refresh rate: {{refresh_rate}} </li>
+      </ul>
+      {{/with}}
+        <h3>Graphics:</h3>
+   <hr/>
+     {{#with graphics}}
+       <ul>
+         <li>Brand: {{brand}} </li>
+         <li>Model: {{model}} </li>
+         <li>Memory: {{memory}} </li>
+      </ul>
+      {{/with}}
+      <h3>Ports:</h3>
+   <hr/>
+     {{#each ports}}
+       <ul>
+         <li>Type: {{type}} </li>
+         <li>Count: {{count}} </li>
+       {{#if features}} 
+         <li>Features: {{#each features}} {{this}} {{/each}}</li> {{/if}}
+      </ul>
+      {{/each}}
+       <h3>Battery:</h3>
+   <hr/>
+     {{#with battery}}
+       <li>Type: {{type}} </li>
+         <li>Capacity: {{capacity}} </li>
+          <li>Life: {{life}} </li>
+      {{/with}}
+      <br>
+      <h3>Weight:</h3>
+   <hr/>
+   Weight: {{weight}}
+   <br>
+   <br>
+      <h3>Dimensions:</h3>
+   <hr/>
+  {{#with dimensions}}
+       <li>Height: {{height}} </li>
+         <li>Width: {{width}} </li>
+          <li>Depth: {{depth}} </li>
+   {{/with}}
+<br>
+      <h3>Operating system:</h3>
+   <hr/>
+Operating system:: {{operating_system}}
+   <br>
+   <br>
+    <h3>Accessories:</h3>
+   <hr/>
+  {{#each accessories}}
+       <li>Name: <em>{{name}}</em> </li>
+         <li>Price: {{price}} </li> <br>
+        
+   {{/each}}
+
+
+  {{/with}}
+  
+  
+   
+
+
+    
+        
+  </main>
+ 
+</div>
