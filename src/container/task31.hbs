@@ -1,0 +1,39 @@
+<div>
+  <main>
+    <div class='row'>
+      {{#with navigation}}
+        {{#each links}}
+          <section class='col-2'>
+            <a href='{{href}}'>{{text}}</a>
+          </section>
+        {{/each}}
+
+        <div class='col-2'>
+          <button
+            class='btn btn-outline-info'
+          >{{text}}</button>
+        </div>
+      {{/with}}
+    </div>
+
+    <hr />
+
+    <div>
+      {{#with header}}
+        <h1>{{title}}</h1>
+        <p class='text-secondary'>{{description}}</p>
+        <a
+          class='btn btn-primary'
+          href='{{link}}'
+          role='button'
+        >{{text}}</a>
+      {{/with}}
+    </div>
+    <a
+      class='btn btn-primary'
+      href='{{link}}'
+      role='button'
+    >{{text}}</a>
+
+  </main>
+</div>
