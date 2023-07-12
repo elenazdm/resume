@@ -8,13 +8,14 @@
 {{#with main}}
   <main>
     <section>
-      {{> title big=true data="Work history"}}
-      <div>
-        {{#each works}}
+       {{> title big=true data="Work history"}}
+       <div>
+         {{#each works}}
         <ul>
           
             <li>
-              <div> {{position}} </div>              </div>
+              <div> {{position}} </div>  
+              </div>           
               
               <br>
 
@@ -87,7 +88,9 @@
         {{/each}}
       </div>
     </section>
+    </main>
   {{/with}}
+  
 
 
 
