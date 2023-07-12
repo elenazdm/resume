@@ -45,6 +45,16 @@ router.get('/', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 // ================================================================
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/test', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('test', {
+    layout: 'basic',
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 //              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/summary', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
