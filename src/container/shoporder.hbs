@@ -129,13 +129,13 @@
               <h2>{{title}}</h2>
               <div class="row">
                  <div class="card  mb-2">
-                          {{#each select}}
-                      <div class="card-body">
+                      {{#each select}}
+                        <div class="card-body">
 
                             
                             <label class='form-label'>{{label}}</label>
-                            
-                                <div class='col-4'>
+                            <div class="row">
+                              <div class='col-6'>
                                 <select class='form-select form-select-sm'>
                                   
                                   <option selected>{{placeholder}}</option>
@@ -144,9 +144,11 @@
                                   {{/each}}
                                   
                                 </select>
-                            </div></div> 
+                              </div>
+                            </div>
+                          </div> 
                     
-                          {{/each}}   
+                      {{/each}}   
                               
                   </div>
                    
@@ -184,17 +186,22 @@
                   
                   <div class="row">
                     {{#with surname}}
+                    <div class="row">
                       <div class="col-6 mb-3">
-                              
-                              <label class='form-label'>{{label}}</label>
-                              <input  class='form-control' placeholder="{{placeholder}}"></input> 
-                              <div class='form-text '>
-                                {{caption}} </div>
-                                
-                      </div>
+                                                    
+                                                    <label class='form-label'>{{label}}</label>
+                                                    <input  class='form-control' placeholder="{{placeholder}}"></input> 
+                                                    <div class='form-text '>
+                                                      {{caption}} </div>
+                                                      
+                                            </div>
 
+
+                    </div>
+                      
                     {{/with}}
                     {{#with name}}
+                    <div class="row">
                       <div class="col-6 mb-3">
                               
                               <label class='form-label'>{{label}}</label>
@@ -203,6 +210,8 @@
                                 {{caption}} </div>
                                 
                       </div>
+                    </div>
+                      
 
                     {{/with}}
                       {{#with phone}}
@@ -430,11 +439,11 @@
                 {{#each this}}
                   <a href="{{link}}" class="nav-link">{{text}}</a> 
                  {{/each}}
-
+                 <a href='{{link}}' class='nav-link disabled'>
+                Disabled</a>
                 </div>
                 <div class="nav-item">
-                  <a href='{{link}}' class='nav-link disabled'>
-                Disabled</a>
+                 
                 </div>
                 
               {{/each}}
