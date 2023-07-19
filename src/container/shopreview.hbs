@@ -134,82 +134,38 @@
   </div>
    {{/with}}
    <hr class="my-5">
+ {{> reviewItem}}
+  
 
-   <div class="card ">
-    <div class="card-body">
-        {{#each reviewList}}
-            <div class="card mt-2">
-                <div class="card-body">
-                    {{#with title}}
-                        <h6>{{userName}}</h6>
-                        <p>{{caption}}</p>
-                        <date>{{date}}</date>
-                    {{/with}}
 
-                </div>
-
-            </div>
-            {{#with reviewBody}}
-                <div class="card">
-                    
-                    <div class="card-body">
-                    
-                        {{#with seller}}
-                        <p class="me-1"> {{title}}:{{value}} </p>
-                        {{/with}}
-
-                        {{#with rating}}
-                        <p class="me-1"> {{title}}:{{value}} </p>
-                        {{/with}}
-
-                        {{#each text}}
-                        {{this}}
-                        {{/each}}
-
-                            {{#with advantages}}
-                        <h6> {{title}} </h6>
-                        <p>{{text}}</p>
-                        {{/with}}
-                        
-                        {{#with disadvantages}}
-                        <h6> {{title}} </h6>
-                        <p>{{text}}</p>
-                        {{/with}}
-
-                        {{#each images}}
-                        <img src="{{this}}">
-                        {{/each}}
-                    </div>
-
-                </div>
-                {{#each coments}}
-                <div class="card ms-5 mt-2"> 
-                    <div class="card-body">
-                        
-                        <h5>{{userName}}</h5> 
-                        <p>{{date}}</p>
-                        <p>{{text}}</p>
-                    
-                    </div>
-                </div> 
-                {{/each}}
-            
-            {{/with}}
-
-                
-                
-            
-           
-            
-            
-        {{/each}}
-    </div>
-   </div>
  {{#with service}}
- <div class="card">
-    <div class="card-body">
+ <div class="card mt-5">
+    <div class="card-body text-bg-success text-center">
+       
+        <h2>{{title}}</h2>
+        <p class="my-3">{{description}}</p>
+        {{#each buttons}}
+         <a class="btn btn-primary" href="{{link}}">{{text}}</a>
+        {{/each}}
         
     </div>
  </div>
  {{/with}}
+ <hr class="mt-5">
+  <div class='nav nav-tabs'>
+    {{#each footer}}
+      <div class='nav-item'>
+        {{#each this}}
+          <a class='nav-link' href='{{link}}'>{{text}}</a>
+        {{/each}}
+        <a
+          class='nav-link disabled'
+          href='{{link}}'
+        >Disabled</a>
+      </div>
+
+    {{/each}}
+
+  </div>
+
 </main>
