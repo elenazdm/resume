@@ -1,69 +1,93 @@
 <div>
  <main>
-    
+    <h1 class="text-center">{{name}} </h1>
      
-    <em>{{> title data="BIO" big=true}}</em>
+    <em class="my-3">{{> title data="BIO" big=true }}</em>
     <div>
-        <strong><b>{{name}}</b></strong>
-        <hr>
-       <div>
-            Birthdate: {{birthdate}} <br>
-            Birthplace: {{birthplace}} <br>
-            Deathdate: {{deathdate}} <br>
-            Deathplace: {{deathplace}} <br>
-            Nationality: {{nationality}} <br>
-            Occupation: {{occupation}} <br>
-            <hr/>
-            <div>
-                Known for: {{known_for}}
-            </div>
-            <hr/>
-            <h3>Education:</h3>
+        
+        
+        <div class="card">
+          <div class="card-body ">
+            
+            
+             Birthdate: {{birthdate}} <br>
+              Birthplace: {{birthplace}} <br>
+              Deathdate: {{deathdate}} <br>
+              Deathplace: {{deathplace}} <br>
+              Nationality: {{nationality}} <br>
+              Occupation: {{occupation}} <br>
+               Known for: {{known_for}}
+          
+             
+            </div>       
+          </div>
+                
+            <h3 class="my-2">Education:</h3>
             {{#each education}}
-            <ul>
+            <div class="card">
+              <div class="card-body">
+                 <ul>
                 <li>Degree: {{degree}}</li>
                 <li>Field: {{field}}</li>
                 <li>Institution: {{institution}}</li>
                 <li>Year: {{year}}</li>
-            </ul>
+                </ul>
+              </div>
+            </div>
+           
             
             {{/each}}
-            <hr/>
+            
             <div>
-               <h3>Notable publications:</h3>
+               <h3 class="my-3">Notable publications:</h3>
                 
               {{#each notable_publications}}
-              <ul><li> Title: <em>{{title}}</em> <br>
+              <div class="card my-2">
+                <div class="card-body">
+                  <ul><li> Title: <em>{{title}}</em> <br>
                 Year: <em>{{year}}</em> <br>
                 Publisher: <em>{{publisher}}</em> <br></li></ul>
+                </div>
+              </div>
+              
                
 
               {{/each}}  
 
             </div>
 
-            <hr/>
+           
             <div>
                <h3>Partners:</h3>
                 
               {{#each partners}}
-              <ul><li> Name: <em>{{name}}</em> <br>
+              <div class="card my-2">
+                <div class="card-body">
+                  <ul><li> Name: <em>{{name}}</em> <br>
                 Relationship: <em>{{relationship}}</em> <br>
                 Years: <em>{{years}}</em> <br></li></ul>
+                </div>
+              </div>
+              
                
 
               {{/each}}  
 
             </div>
-             <hr/>
+            
             <div>
                <h3>Awards:</h3>
                 
               {{#each awards}}
-              <ul><li> Title: <em>{{title}}</em> <br>
+              <div class="card">
+                <div class="card-body">
+                  <ul><li> Title: <em>{{title}}</em> <br>
                 Year: <em>{{year}}</em> <br>
                 Description: <em>{{description}}</em> <br></li></ul>
                
+                </div>
+              </div>
+              
 
               {{/each}}  
 
